@@ -10,6 +10,8 @@ This is a portfolio website built using Next.js and Tailwind CSS. It showcases m
 * SEO optimized for better search engine rankings
 * Easy to navigate and find information
 
+## Live Link: `https://portfolio-mine-sage.vercel.app`
+
 ## Technologies Used
 
 * Next.js for server-side rendering and static site generation
