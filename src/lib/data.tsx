@@ -30,7 +30,7 @@ export const projectsData = [
     description:
       'A full‑stack MERN Blog Application featuring authentication, blog and category management, profile updates, image uploads, rich-text editing, comments, likes, real-time chat, AI-generated content, and deployment on Vercel.',
     technologies: [
-      'React',
+      'React.js',
       'Node.js',
       'Tailwind',
       'Shadcn/ui',
@@ -45,7 +45,7 @@ export const projectsData = [
     image: '/images/project-1.png',
     title: 'ChatApp',
     description:
-      'ChatApp is a real-time chat application built using ReactJS, Redux and Socket.IO on the frontend, and NodeJS, Express and MongoDB on the backend.The application allows users to sign up and log in to their accounts, and engage in real-time conversations with other users.',
+      'It is a real-time chat application built using ReactJS, Redux and Socket.IO on the frontend, and NodeJS, Express and MongoDB on the backend.The application allows users to sign up and log in to their accounts, and engage in real-time conversations with other users.',
     technologies: ['React.js', 'Redux', ' Socket.IO', 'Tailwind', 'MongoDB'],
     links: {
       github: 'https://github.com/awoladhossain/chat-box.git',
