@@ -20,51 +20,78 @@ export const Experience = () => {
     >
       <SectionHeading
         heading="My Experience"
-        content="Professional experience that I have accumulated over several years."
+        content="Professional software engineering experience and technical achievements."
       />
-      <div className="relative max-w-screen-md">
+      <div className="relative ml-4 max-w-screen-md md:ml-0">
         {experiencesData.map(
-          ({ title, description, company, period, technologies }) => (
-            <div
-              key={company}
-              className="not-last:pb-12 relative pl-8 [&:not(:last-child)]:pb-10"
-            >
-              <div className="bg-muted absolute left-0 top-2.5 h-full w-[2px] group-first:top-6 group-first:h-[calc(100%-24px)]">
-                <div className="border-primary bg-background absolute left-[-5px] top-0 size-3 rounded-full border-2" />
+          ({ title, points, company, period, technologies }, index) => (
+            <div key={company} className="group relative pb-10 pl-8 last:pb-0">
+              {/* Vertical line connecting dots */}
+              {index !== experiencesData.length - 1 && (
+                <div className="bg-muted group-hover:bg-primary/30 absolute bottom-0 left-[7px] top-6 w-[2px] transition-colors duration-300" />
+              )}
+
+              {/* Dot */}
+              <div className="border-primary bg-background group-hover:border-primary absolute left-0 top-1.5 flex size-[15px] items-center justify-center rounded-full border-2 transition-all duration-300 group-hover:scale-125">
+                <div className="bg-primary group-hover:bg-primary size-1.5 rounded-full transition-all duration-300" />
               </div>
+
               <motion.div
-                initial={{ opacity: 0, y: 100 }}
+                initial={{ opacity: 0, y: 50 }}
                 whileInView={{
                   opacity: 1,
                   y: 0,
                 }}
                 transition={{
-                  delay: 0.175,
+                  delay: index * 0.1,
+                  duration: 0.5,
+                  ease: 'easeOut',
                 }}
                 viewport={{
                   once: true,
+                  margin: '-50px',
                 }}
-                className={cn('space-y-3 opacity-0')}
+                className={cn(
+                  'bg-card/30 border border-border/50 backdrop-blur-sm -mt-4 space-y-4 rounded-2xl p-6 transition-all duration-300 hover:bg-card/50 hover:border-primary/25 hover:shadow-xl hover:shadow-primary/5'
+                )}
               >
-                <div className="flex items-center gap-3">
-                  <div className="flex size-9 shrink-0 items-center justify-center rounded-full border">
-                    <Icons.building className="size-5" />
+                <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
+                  <div className="flex items-center gap-3">
+                    <div className="bg-primary/10 border border-primary/20 flex size-10 shrink-0 items-center justify-center rounded-xl transition-all duration-300">
+                      <Icons.building className="text-primary size-5" />
+                    </div>
+                    <div>
+                      <h3 className="text-foreground text-lg font-bold leading-tight">
+                        {title}
+                      </h3>
+                      <span className="text-muted-foreground text-sm font-semibold transition-colors group-hover:text-primary">
+                        {company}
+                      </span>
+                    </div>
                   </div>
-                  <span className="text-lg font-semibold">{company}</span>
-                </div>
-                <div>
-                  <h3 className="text-xl font-medium">{title}</h3>
-                  <div className="mt-1 flex items-center gap-2 text-sm">
-                    <Icons.calendar className="size-4" />
+                  <div className="bg-secondary text-secondary-foreground border border-border/40 inline-flex items-center gap-1.5 self-start rounded-full px-3 py-1 text-xs font-medium sm:self-center">
+                    <Icons.calendar className="size-3.5" />
                     <span>{period}</span>
                   </div>
                 </div>
-                <p className="text-muted-foreground">{description}</p>
-                <div className="flex flex-wrap gap-2">
+
+                <ul className="text-muted-foreground space-y-2.5 pl-1">
+                  {points.map((point, idx) => (
+                    <li
+                      key={idx}
+                      className="flex items-start gap-2.5 text-sm leading-relaxed"
+                    >
+                      <span className="bg-primary/80 mt-2 size-1.5 shrink-0 rounded-full" />
+                      <span>{point}</span>
+                    </li>
+                  ))}
+                </ul>
+
+                <div className="flex flex-wrap gap-1.5 pt-2">
                   {technologies.map((tech) => (
                     <div
                       key={tech}
-                      className="rounded-full border px-3 py-1 text-sm "
+                      className="bg-background/80 text-muted-foreground border-border/40 hover:border-primary/30 hover:text-primary rounded-md border px-2.5 py-1 text-xs transition-all duration-300"
                     >
                       {tech}
                     </div>

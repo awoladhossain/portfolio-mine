@@ -21,16 +21,17 @@ export const About = () => {
       <SectionHeading heading="About Me" />
       <div className="-mt-5 max-w-2xl text-center leading-7">
         <p className="mb-4">
-          I&apos;m Awolad Hossain, a full-stack developer from Bangladesh with a
-          strong focus on backend engineering. I specialize in building scalable
-          APIs, containerized applications, and modern web solutions using
+          I&apos;m Awolad Hossain, a Backend Software Engineer from Bangladesh.
+          I specialize in building high-concurrency distributed systems,
+          optimizing database performance, and designing scalable API services
+          using
           <strong>
             {' '}
-            Node.js, Express.js, Go, Docker, and MongoDB/PostgreSQL
+            Go, Node.js/NestJS, Prisma, Docker, and PostgreSQL/Redis
           </strong>
-          . My journey in software development has been driven by curiosity and
-          problem-solving. I enjoy tackling complex challenges and turning ideas
-          into production-ready systems.
+          . My journey in software engineering has been driven by optimization
+          and complex problem-solving. I love turning concepts into robust,
+          production-ready backend systems.
         </p>
         <p>
           I&apos;m open to Job opportunities where I can contribute, learn and

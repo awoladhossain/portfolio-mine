@@ -1,9 +1,9 @@
 import { env } from '@/env.mjs';
 
 export const siteConfig = {
-  title: 'Awolad Hossain | Full-stack developer',
+  title: 'Awolad Hossain | Backend Software Engineer',
   description:
-    "Hello, I'm Awolad Hossain, a Full-stack developer from Bangladesh. I specialize in building scalable APIs, containerized applications, and modern web apps with React (Next.js) and Node.js.",
+    "Hello, I'm Awolad Hossain, a Backend Software Engineer from Bangladesh. I specialize in high-concurrency distributed systems, database optimization, and scalable APIs using Go, Node.js/NestJS, and PostgreSQL.",
   keywords: [
     'Awolad Hossain',
     'Full-stack developer',
